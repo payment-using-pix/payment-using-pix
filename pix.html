@@ -1,0 +1,100 @@
+<html lang="pt-br">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="bootstrap.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+        <link rel="stylesheet" href="estilos.css" />
+        <link rel="stylesheet" href="forms.css" />
+        <title>Amazon</title>
+    </head>
+    <body style="display: block;">
+        <div class="container-fluid">
+            <div class="row navbar" style="height: 82px;">
+                <a href="index.html">
+                    <div class="col-3" style="text-align: center;">
+                        <img src="amazon.png" style="margin: 20px;" />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <a href="">
+                <div class="row" style="/*! margin-left: -15px; */ /*! margin-right: -15px; */">
+                    <div class="col-12" style="padding: 0px; display: grid;">
+                        <div class="return" style="padding: 15px; padding-left: 25px;">
+                            <h6 style="display: contents; margin-left: 10px;">Aguardando confirmação do pagamento</h6>
+                        </div>
+                        <img src="barra.gif" style="width: 100%;" />
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="margin-top: 36px;" class="container">
+            <div class="row">
+                <div class="col-12" style="/*! padding: 28px; */ margin-left: 26px;">
+                    <h6 style="color: gray;"></h6>
+                </div>
+                <div class="col-12" style="/*! padding: 28px; */ margin-left: 26px;">
+                    <p style="font-size: large; color: darkgrey;">Frete: Grátis</p>
+
+                    <p style="font-size: large; color: darkgray;">Total + Descontos Black Friday:</p>
+                    <p style="font-size: large; color: black; font-weight: 700; width: 50%; display: contents;">R$ 1949.90</p>
+                    <img src="snake.gif" style="margin-left: 6px; margin-top: 1px;" />
+                    <h6 style="color: gray; /* text-align: center; */">Chave pix para pagamento</h6>
+                </div>
+            </div>
+            <div class="row" style="padding: 24px; display: flex;">
+                <div style="text-align: center;" class="col-8">
+                    <input
+                        type="text"
+                        name="texto"
+                        id="texto"
+                        placeholder="Digite alguma coisa"
+                        value="d166a032-29b2-4c6e-a31c-a2a9f7c6c4c3"
+                        readonly="readonly"
+                        style="width: auto; height: 56px; border: none; border-radius: 4px; /* margin-top: 32px; */ padding: 19px;"
+                    />
+                </div>
+                <div style="/* margin-top: 32px; */" class="col-2">
+                    <button id="btn-pix" onclick="clickedBtn(copiarTexto())" style="margin-left: 20px; width: auto; padding: 20px; border: none; border-radius: 4px; font-weight: 700;">Copiar</button>
+                </div>
+            </div>
+            <p style="padding: 15px;">* Pagamentos efetuados via PIX podem levar de 15 a 30 minutos para serem processados</p>
+            <div class="b-button" style="margin: 15px;">
+                <input class="c-button-input" value="Aguardando pagamento" type="submit" id="submit" placeholder="Continuar" style="background-color: #ffd81442;" />
+            </div>
+        </div>
+        <script>
+            function clickedBtn() {
+                let btn = document.getElementById("btn-pix");
+                btn.style.backgroundColor = "#AAC9FF";
+            }
+
+            function copiarTexto() {
+                let textoCopiado = document.getElementById("texto");
+                textoCopiado.select();
+                textoCopiado.setSelectionRange(0, 99999);
+                document.execCommand("copy");
+                alert("A chave pix é: " + textoCopiado.value);
+            }
+        </script>
+
+        <!--Footer-->
+        <footer style="margin-top: 92px;">
+            <div class="row justify-content-center a-a" style="">
+                <div class="col-3"><h1>Cookies</h1></div>
+                <div class="col-3"><h1>Condições de uso</h1></div>
+                <div class="col-3"><h1>Aviso de Privacidade</h1></div>
+            </div>
+            <div class="row justify-content-center a-a">
+                <div class="col-10">
+                    <h1>© 1996-2021, Amazon.com, Inc. ou suas afiliadas</h1>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
